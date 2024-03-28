@@ -3,25 +3,17 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>Insert title here</title>
-<link href="${rootPath}/static/css/main.css"
-	rel="stylesheet">
-</head>
+<html lang="ko">
+	<%@ include file="/WEB-INF/views/includes/head.jspf" %>
 <body>
-	<header class="main">
-		<h1>반갑습니다</h1>
-		<h2>지금 시각은 ${serverTime}</h2>
-	</header>
-	<nav>
-		<ul>
-			<li><a href="/login"> HOME </a></li>
-			<li><a href="/login"> 공지사항 </a></li>
-			<li><a href="/login"> 로그인 </a></li>
-			<li><a href="${rootPath}/user/join"> 회원가입 </a></li>
-		</ul>
-	</nav>
+	<%@ include file="/WEB-INF/views/includes/header.jsp" %>
+	
+	<section class="w3-container w3-cell-row w3-padding-16">
+		<article class="w3-container w3-cell w3-purple">상품정보</article>
+		<article class="w3-container w3-cell w3-teal">주문정보</article>
+		<article class="w3-container w3-cell w3-yellow">거래처정보</article>
+	</section>
+	
+	
 </body>
 </html>
