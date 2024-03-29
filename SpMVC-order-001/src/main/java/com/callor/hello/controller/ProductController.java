@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.callor.hello.models.CustomVO;
 import com.callor.hello.models.ProductVO;
 import com.callor.hello.persistance.ProductDao;
 
@@ -77,12 +78,12 @@ public class ProductController {
 			result = productDao.delete(pCode);
 			
 		} catch (Exception e) {
-			return "redirect:/product/detail?p_code=" + pCode + "&msg=FK";
+			return "redirect:/customer/detail?p_code=" + pCode + "&msg=FK";
 		}
 		if (result > 0) {
-			return "redirect:/product";
+			return "redirect:/customer";
 		} else {
-			return "redirect:/product/detail?p_code=" + pCode + "&msg=NOT";
+			return "redirect:/customer/detail?p_code=" + pCode + "&msg=NOT";
 		}
 	}
 }
