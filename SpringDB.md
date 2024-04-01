@@ -42,6 +42,20 @@
     <artifactId>mysql-connector-j</artifactId>
     <version>8.3.0</version>
 </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
 ```
 - `주의할점` :`spring-jdbc` 는 `spring-webmvc`와 버전을 일치시킬것
 - `주의할점` :`mybatis-spring` 버전 유의, `SpringFramework 5.2.x` 버전, `Java 17` 미만 버전에서는 `3.0.0` 이하를 사용해야 한다
